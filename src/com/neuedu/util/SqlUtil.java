@@ -3,14 +3,14 @@ package com.neuedu.util;
 import java.sql.*;
 
 public class SqlUtil {
-    //1:加载驱动 --静态代码块
-     static {
+    //1:加载驱动 --静态代码块--自动加载
+    /* static {
         try {
             Class.forName(ParaSql.DRIVER);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 
     //2:连接数据库-- 静态方法
     public static Connection getConn(){

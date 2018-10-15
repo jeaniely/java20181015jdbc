@@ -1,7 +1,6 @@
 package com.neuedu.util;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+
 import java.io.InputStream;
 import java.util.Properties;
 
@@ -20,7 +19,8 @@ public class ParaSql {
     static {
         try {
           /*  InputStream is=new FileInputStream("src/db.properties");*/
-            InputStream is=ParaSql.class.getClassLoader().getResourceAsStream("db.properties");
+            //InputStream is=ParaSql.class.getClassLoader().getResourceAsStream("db.properties");
+            InputStream is=ClassLoader.getSystemClassLoader().getResourceAsStream("db.properties");
             properties.load(is);
         } catch (Exception e) {
             e.printStackTrace();
